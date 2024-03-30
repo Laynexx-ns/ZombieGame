@@ -13,6 +13,10 @@ namespace ZombieGame.Classes
         {
             Console.WriteLine("Player: АА!");
         }
+        public void ReactionOnZombieRun(string zombieType)
+        {
+            Console.WriteLine($"Player: Зомби идет, тип: {zombieType}");
+        }
 
     }
 }

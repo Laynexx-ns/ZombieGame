@@ -12,14 +12,15 @@ namespace ZombieGame
         static void Main(string[] args)
         {
             Player player = new Player();
-            Zombie zombie = new Zombie();
+            Zombie zombie = new Zombie("a");
 
             //подписка на событие
             zombie.Roared += player.ReactionOnZombieRoar;
-
+            zombie.Ran += player.ReactionOnZombieRun;
 
             //активация
             zombie.Roar();
+            zombie.Run();
 
         }
     }
