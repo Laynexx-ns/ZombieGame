@@ -10,6 +10,7 @@ namespace ZombieGame.Classes
     {
         public event Action Roared;
         public event Action<string> Ran;
+        public event Action<Zombie> Stopped;
 
         string type;
 
@@ -34,6 +35,14 @@ namespace ZombieGame.Classes
             if (Ran != null)
             {
                 Ran(type);
+            }
+        }
+
+        public void Stop()
+        {
+            if (Stopped != null)
+            {
+                Stopped(this);
             }
         }
     }

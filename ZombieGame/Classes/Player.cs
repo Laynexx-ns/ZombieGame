@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +17,11 @@ namespace ZombieGame.Classes
         public void ReactionOnZombieRun(string zombieType)
         {
             Console.WriteLine($"Player: Зомби идет, тип: {zombieType}");
+        }
+
+        public void RactionOnZombieStop(Zombie zombie)
+        {
+            Console.WriteLine("Player: zombie has been stoped");
         }
 
     }

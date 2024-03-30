@@ -17,10 +17,12 @@ namespace ZombieGame
             //подписка на событие
             zombie.Roared += player.ReactionOnZombieRoar;
             zombie.Ran += player.ReactionOnZombieRun;
+            zombie.Stopped += player.RactionOnZombieStop;
 
             //активация
             zombie.Roar();
             zombie.Run();
+            zombie.Stop();
 
         }
     }
